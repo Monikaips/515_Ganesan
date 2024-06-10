@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Famous Personality Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+</head>
+<style>
+  .hero-content {
+        position: relative;
+        z-index: 2;
+    }
+
+    .hero::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+    }
+
+    .section-title {
+        text-align: center;
+        margin: 50px 0 20px;
+        font-size: 32px;
+        color: #333;
+    }
+
+    .section-subtitle {
+        text-align: center;
+        margin: 20px 0;
+        font-size: 24px;
+        color: #666;
+    }
+
+    .home-content {
+        padding: 20px;
+        background: #f9f9f9;
+        text-align: center;
+    }
+
+    .home-content p {
+        font-size: 18px;
+        line-height: 1.6;
+        color: #333;
+        max-width: 800px;
+        margin: 20px auto;
+    }
+
+    .home-content .highlight {
+        font-weight: bold;
+        color: #000;
+    }
+
+    .icon-box {
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.icon-box div {
+    flex: 0 0 calc(33.33% - 40px); /* Calculate width for three items in a row */
+    padding: 20px;
+    border-radius: 50px;
+    box-shadow: inset 13px 13px 26px #07170a,
+        inset -13px -13px 26px #1d5d2a;
+    text-align: center;
+    margin: 20px; /* Add margin around each box */
+}
+
+
+
+    .icon-box div i {
+        font-size: 36px;
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+</style>
+<body>
+    <header>
+        <img src="images/logo.jpg" alt="Logo" id="logo">
+        <nav>
+            <ul>
+                <li><a href="biography.html">Biography</a></li>
+                <li><a href="service.html">Service Works</a></li>
+                <li><a href="achievements.html">Achievements</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li id="google_translate_element"></li> 
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="hero">
+            <div class="slider">
+                <div>
+                    <img src="images/header-background.png" alt="Slide 1">
+                </div>
+                <!-- Add more slides as needed -->
+            </div>
+        </section>
+
+         
+        <section id="service-works">
+            <h2>Service Works</h2>
+            <div class="service-stats">
+                <div class="stat">
+                    <span class="stat-number">5000+</span>
+                    <span class="stat-description">Orphaned Corpses</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">3000+</span>
+                    <span class="stat-description">Corpses</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">2500+</span>
+                    <span class="stat-description">Pregnant Women</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">2000+</span>
+                    <span class="stat-description">Accident Victims</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="home" class="home-content">
+            <h2 class="section-title">Social Worker Alangudi Dr. 515 Ganesan</h2>
+            <p><span class="highlight">In the last 54 years, since 1968,</span> he has single-handedly used his Ambassador car to provide free burial of <span class="highlight">10,122 dead</span> (out of which more than 4100 were without families), saved more than <span class="highlight">4100 pregnant women</span> and saved more than <span class="highlight">4000 accident victims</span>. Now the 108 ambulance was inspired by 515 Ganesan.</p>
+            <div class="icon-box">
+                <div>
+                    <i class="fas fa-ambulance"></i>
+                    <p>Started 108 Ambulance Service</p>
+                </div>
+                <div>
+                    <i class="fas fa-award"></i>
+                    <p>Awarded by Indian Red Cross</p>
+                </div>
+                <div>
+                    <i class="fas fa-hands-helping"></i>
+                    <p>Collected Rs.1 crore for Natural Disasters</p>
+                </div>
+                <div>
+                    <i class="fas fa-user-md"></i>
+                    <p>Awarded Doctor Degree in Social Work</p>
+                </div>
+                <div>
+                    <i class="fas fa-car"></i>
+                    <p>Provided Emergency Services with Own Car</p>
+                </div>
+                <div>
+                    <i class="fas fa-medal"></i>
+                    <p>Received 85+ Social Worker Awards</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="footer">
+        <div class="footer__content">
+            <div class="footer__logo">
+                <a href="#" class="footer__link">
+                    <img src="images/logo.jpg" alt="Logo" class="footer__icon">
+                </a>
+            </div>
+            <div class="footer__contact-info">
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> Alangudi, Pudukottai(Dt), Tamil Nadu.</li>
+                    <li><i class="fas fa-envelope"></i> 515sganesan@gmail.com</li>
+                    <li><i class="fas fa-mobile-alt"></i> +91 8248354118</li> 
+                    <li><i class="fab fa-whatsapp"></i> +91 8248354118</li>
+                </ul>
+            </div>
+            <div class="footer__social-media">
+                <ul>
+                    <li><a href="https://www.facebook.com/ganesan.alangudi" class="social-media-link"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="https://youtube.com/channel/UCz-cc83KITcJ9wb7o1OfNxA" class="social-media-link"><i class="fab fa-youtube"></i></a></li>
+                    <li><a href="https://twitter.com/515ganesan_off?t=Zsjv23t9836_f1rZpTnTqg&s=08" class="social-media-link"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://instagram.com/515_ganesan?igshid=yi311pjrwoyh" class="social-media-link"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p>&copy; 2023 515 Ganesan. All rights reserved.<br> Developed by <a href="https://www.linkedin.com/in/monika-p-30b32a22a/" class="developer-name">Monika</a></p>
+        </div>
+    </footer>
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <script>
+        function googleTranslateElementInit(){
+            new google.translate.TranslateElement(
+                {pageLanguage: 'en'},
+                'google_translate_element'
+            );
+        }
+    </script>
+</body>
+</html>
