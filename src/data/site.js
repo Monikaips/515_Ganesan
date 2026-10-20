@@ -1,10 +1,12 @@
+import { assetUrl } from '../lib/assetUrl.js';
+
 export const site = {
   name: '515 Ganesan',
   title: 'Social Worker Alangudi Dr. 515 Ganesan',
   email: '515sganesan@gmail.com',
   phone: '+91 8248354118',
   address: 'Alangudi, Pudukottai(Dt), Tamil Nadu.',
-  mark: '/archive/media/logo.jpg',
+  mark: assetUrl('archive/media/logo.jpg'),
   markAlt: '75 years of 515 Ganesan',
   developerUrl: 'https://www.linkedin.com/in/monika-p-30b32a22a/',
   socials: [
