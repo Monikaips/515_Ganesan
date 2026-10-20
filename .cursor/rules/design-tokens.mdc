@@ -1,0 +1,29 @@
+---
+description: Enforce the 515 Ganesan color system. No colors outside design tokens.
+alwaysApply: true
+---
+
+# Design tokens
+
+All color must come from `src/styles/tokens.css` (and the JS mirror `src/styles/tokens.js`).
+
+Allowed values only:
+
+- Background (off-white): `#F8F8F5` → `var(--color-background)`
+- Surface (white): `#FFFFFF` → `var(--color-surface)`
+- Primary (near-black): `#1A1A1A` → `var(--color-primary)`
+- Emergency Red: `#D62828` → `var(--color-emergency)`
+- Deep Red: `#9D0208` → `var(--color-emergency-deep)`
+- Muted: `#5C5C5C` → `var(--color-muted)`
+- Border: `#E8E8E2` → `var(--color-border)`
+
+## Rules
+
+- Do not introduce new hex, rgb, rgba, hsl, or named CSS colors in components, pages, or extra stylesheets.
+- Do not use social-network brand colors, Bootstrap blues, or the old green NGO palette (`#2c8b73`, etc.).
+- Hover / active / focus use Emergency Red or Deep Red. Body text uses Primary. Secondary text uses Muted. Dividers use Border.
+- Red may be used as a full section surface (impact bands, CTAs). Deep red is for hover and dark red sections.
+- Font Awesome is for UI controls (search, play, menu, close, phone, mail). Historical identities use NewspaperMark, OrganizationMark, or the original photograph — never a generic newspaper / trophy / YouTube icon.
+- Success states stay in this system (Primary or Emergency). Never add green, purple, or terracotta.
+- If a new token is truly required, add it to `tokens.css` and `tokens.js` first, then use the variable.
+- Use `src/components/RedLine/RedLine.jsx` for the road / heartbeat journey mark.

@@ -1,0 +1,15 @@
+---
+description: Content lives in src/data. Do not hardcode stories into JSX.
+alwaysApply: true
+---
+
+# Data layer
+
+- Page copy, years, facts, and image paths live in `src/data/` (`timeline.js`, `the515.js`, `theMan.js`, `archive.js`, `catalog.js`, `awards.js`, `hisVoice.js`, `family.js`, `legacy.js`, `home.js`, `impact.js`, `places.js`).
+- Geographic impact counts live in `src/data/impact.js` as unique documented locations only. Never invent district tallies. Tamil Nadu district paths live in `src/data/tamilNaduMap.js` (`npm run build:tn-map`). Out-of-state work uses `beyondTamilNadu` + `src/data/indiaStatesMap.js` (`npm run build:india-map`). Do not plot Kerala/Karnataka/Odisha on the TN district map.
+- Photographs live in `public/archive/{portraits,early-life,ambulance,service,disasters,awards,media,family,documents}/`.
+- To add a year to The Journey, append an object to `timeline` in `src/data/timeline.js`. Do not rewrite the Journey UI.
+- To add an archive item, append to `catalog` in `src/data/catalog.js` with `tab`, `category`, and `year` (search and filters come later).
+- Newspapers, television, and organizations live in `src/data/sources.js`. Drop a monochrome mark in `public/archive/marks/{id}.svg` and set `logo`. Until then the masthead is the name. Never use Font Awesome as a historical identity.
+- To add a verified quote or interview, fill `quote` / `video` on the chapter in `hisVoice.js`, `family.js`, or `legacy.js`. Leave the field `null` until then.
+- Do not invent family names, quotes, or dates that are not in the record. Leave a gap rather than a fiction.
