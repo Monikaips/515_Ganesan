@@ -1,0 +1,91 @@
+.sticky-contact {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  :root {
+    /* 12 + 12 padding + 48px buttons + home-indicator safe area */
+    --sticky-bar-h: calc(0.75rem + 0.75rem + 3rem + env(safe-area-inset-bottom, 0px));
+  }
+
+  #root {
+    padding-bottom: var(--sticky-bar-h);
+  }
+
+  .sticky-contact {
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-2);
+    padding: 0.75rem 1rem;
+    padding-bottom: calc(0.75rem + env(safe-area-inset-bottom, 0px));
+    background: var(--color-surface);
+    border-top: var(--stroke) solid var(--color-border);
+    box-shadow: 0 -0.25rem 1rem color-mix(in srgb, var(--color-primary) 12%, transparent);
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+
+  .sticky-contact--hidden {
+    transform: translateY(100%);
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .sticky-contact__call,
+  .sticky-contact__message {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+    min-height: 3rem; /* 48px tap target */
+    height: 3rem;
+    padding: 0 var(--space-4);
+    text-decoration: none;
+    font-family: var(--font-sans);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  .sticky-contact__call {
+    background: var(--color-surface);
+    color: var(--color-emergency);
+    border: var(--stroke-emergency) solid var(--color-emergency);
+  }
+
+  .sticky-contact__message {
+    background: var(--color-emergency);
+    color: var(--color-surface);
+    border: var(--stroke-emergency) solid var(--color-emergency);
+  }
+
+  .sticky-contact__call:focus-visible,
+  .sticky-contact__message:focus-visible {
+    outline: var(--stroke-emergency) solid var(--color-emergency);
+    outline-offset: 3px;
+  }
+
+  .sticky-contact__message:focus-visible {
+    outline-color: var(--color-primary);
+  }
+
+  .sticky-contact__call:hover {
+    background: var(--color-background);
+  }
+
+  .sticky-contact__message:hover {
+    background: var(--color-emergency-deep);
+    border-color: var(--color-emergency-deep);
+  }
+}
+
+@media (max-width: 768px) and (prefers-reduced-motion: reduce) {
+  .sticky-contact {
+    transition: none;
+  }
+}

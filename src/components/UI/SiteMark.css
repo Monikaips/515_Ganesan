@@ -1,0 +1,25 @@
+.site-mark {
+  display: block;
+  object-fit: contain;
+  background: transparent;
+}
+
+.site-mark--small {
+  width: 4.5rem;
+  height: 4.5rem;
+}
+
+.site-mark--default {
+  width: 7.5rem;
+  height: 7.5rem;
+}
+
+.site-mark--hero {
+  width: min(22rem, 100%);
+  height: auto;
+}
+
+.site-mark__link {
+  display: inline-block;
+  line-height: 0;
+}

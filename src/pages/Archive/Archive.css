@@ -1,0 +1,68 @@
+.archive-hero {
+  width: min(var(--max-width), 100%);
+  margin: 0 auto;
+  padding: var(--space-8) var(--space-6) var(--space-6);
+}
+
+.archive-hero h1 {
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
+  max-width: 14ch;
+  margin: var(--space-5) 0 var(--space-4);
+}
+
+.archive-hero__lede {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  color: var(--color-muted);
+  max-width: 28ch;
+}
+
+.archive-body {
+  width: min(var(--max-width), 100%);
+  margin: 0 auto;
+  padding: var(--space-7) var(--space-6) var(--space-8);
+}
+
+.archive-count {
+  font-size: 0.6875rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  margin: 0 0 var(--space-6);
+}
+
+.archive-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: var(--space-6) var(--space-5);
+}
+
+.archive-press {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: var(--space-5);
+}
+
+.archive-empty {
+  color: var(--color-muted);
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  max-width: 24ch;
+}
+
+.archive-needed {
+  margin-top: var(--space-8);
+}
+
+.archive-slots {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: var(--stroke);
+  margin-top: var(--space-5);
+}
+
+@media (max-width: 700px) {
+  .archive-slots {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,68 @@
+.newspaper-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--color-muted);
+}
+
+.newspaper-mark img {
+  display: block;
+  max-width: 70%;
+  max-height: 3rem;
+  object-fit: contain;
+  filter: grayscale(1);
+  opacity: 0.85;
+}
+
+.newspaper-mark p {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15em;
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  line-height: 1.15;
+}
+
+.newspaper-mark--tile {
+  width: 100%;
+  min-height: 8rem;
+}
+
+.newspaper-mark--tile p {
+  font-size: clamp(0.8rem, 1.6vw, 1.05rem);
+}
+
+.newspaper-mark--small p {
+  font-size: 0.7rem;
+}
+
+.newspaper-mark--hero p {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  color: var(--color-primary);
+}
+
+.newspaper-mark--on-dark {
+  color: var(--color-background);
+}
+
+.newspaper-mark--on-dark p {
+  color: var(--color-background);
+}
+
+button:hover .newspaper-mark,
+a:hover .newspaper-mark,
+.press-tile:hover .newspaper-mark,
+.press-tile.is-open .newspaper-mark {
+  color: var(--color-primary);
+}
+
+button:hover .newspaper-mark img,
+a:hover .newspaper-mark img,
+.press-tile:hover .newspaper-mark img {
+  filter: none;
+  opacity: 1;
+}

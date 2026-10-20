@@ -1,0 +1,100 @@
+.family-hero {
+  width: min(var(--max-width), 100%);
+  margin: 0 auto;
+  padding: var(--space-8) var(--space-6) var(--space-6);
+}
+
+.family-hero h1 {
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
+  max-width: 16ch;
+  margin: var(--space-5) 0 var(--space-4);
+}
+
+.family-hero__lede {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  color: var(--color-muted);
+  max-width: 28ch;
+}
+
+.family-index {
+  width: min(var(--max-width), 100%);
+  margin: 0 auto;
+  padding: var(--space-5) var(--space-6);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4) var(--space-6);
+  border-top: var(--stroke) solid var(--color-border);
+  border-bottom: var(--stroke) solid var(--color-border);
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background: var(--color-background);
+}
+
+.family-index a {
+  font-size: 0.6875rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--color-primary);
+}
+
+.family-index a:hover {
+  color: var(--color-emergency);
+}
+
+.family-chapter {
+  width: min(var(--max-width), 100%);
+  margin: 0 auto;
+  padding: var(--space-8) var(--space-6);
+  scroll-margin-top: 4.5rem;
+  border-bottom: var(--stroke) solid var(--color-border);
+}
+
+.family-chapter:last-child {
+  border-bottom: 0;
+}
+
+.family-chapter__head h2 {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  max-width: 18ch;
+  margin: var(--space-5) 0 0;
+}
+
+.family-chapter__body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-7);
+  align-items: start;
+  margin-top: var(--space-6);
+}
+
+.family-chapter__body:not(:has(.family-chapter__image)) {
+  grid-template-columns: 1fr;
+}
+
+.family-chapter__image {
+  overflow: hidden;
+  border: var(--stroke) solid var(--color-border);
+}
+
+.family-chapter__image img {
+  display: block;
+  width: 100%;
+  min-height: 280px;
+  object-fit: cover;
+}
+
+.family-slots {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: var(--stroke);
+  margin-top: var(--space-6);
+}
+
+@media (max-width: 800px) {
+  .family-chapter__body {
+    grid-template-columns: 1fr;
+  }
+}

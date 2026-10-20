@@ -1,0 +1,216 @@
+.archive-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  background: var(--color-primary);
+  color: var(--color-background);
+  overflow: auto;
+  padding: var(--space-6);
+}
+
+.archive-modal__back,
+.archive-modal__nav button {
+  background: none;
+  border: 0;
+  color: var(--color-background);
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.archive-modal__back {
+  position: sticky;
+  top: 0;
+  display: block;
+  padding: var(--space-2) 0;
+}
+
+.archive-modal__panel {
+  width: min(44rem, 100%);
+  margin: var(--space-6) auto var(--space-8);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-5);
+}
+
+.archive-modal__year {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  font-weight: 700;
+  line-height: 0.9;
+  color: var(--color-emergency);
+}
+
+.archive-modal__panel h2 {
+  margin: 0;
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  color: var(--color-background);
+  max-width: 18ch;
+}
+
+.archive-modal__sub {
+  margin: 0;
+  color: var(--color-muted);
+}
+
+.archive-modal__body {
+  margin: 0;
+  font-size: var(--text-lg);
+  max-width: 38rem;
+}
+
+.archive-modal__image,
+.archive-modal__empty {
+  width: 100%;
+  max-height: 70vh;
+  object-fit: contain;
+  border: var(--stroke) solid var(--color-muted);
+}
+
+.archive-modal__empty {
+  min-height: 12rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6875rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+.archive-modal__source {
+  font-size: 0.6875rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--color-emergency);
+  border-bottom: var(--stroke-emergency) solid var(--color-emergency);
+  padding-bottom: var(--space-1);
+}
+
+.archive-modal__source:hover {
+  color: var(--color-background);
+  border-bottom-color: var(--color-background);
+}
+
+.archive-modal__rule {
+  width: 100%;
+  height: var(--stroke);
+  background: var(--color-muted);
+}
+
+.archive-modal__label {
+  font-size: 0.6875rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  margin: 0 0 var(--space-4);
+}
+
+.archive-modal__thumbs {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: var(--space-3);
+}
+
+.archive-modal__thumbs img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border: var(--stroke) solid var(--color-muted);
+}
+
+.archive-modal__news {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.archive-modal__news a {
+  display: block;
+  text-decoration: none;
+  color: var(--color-background);
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 600;
+  padding-bottom: var(--space-4);
+  border-bottom: var(--stroke) solid var(--color-muted);
+}
+
+.archive-modal__news a span {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  margin-bottom: var(--space-2);
+}
+
+.archive-modal__videos {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: var(--space-4);
+}
+
+.archive-modal__videos a {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  text-decoration: none;
+  color: var(--color-background);
+  font-size: var(--text-sm);
+}
+
+.archive-modal__videos img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border: var(--stroke) solid var(--color-muted);
+}
+
+.archive-modal__nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: var(--space-5);
+  border-top: var(--stroke) solid var(--color-muted);
+}
+
+.archive-modal__nav button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.archive-modal .archive-slot {
+  background: transparent;
+  border-color: var(--color-muted);
+  width: 100%;
+}
+
+.archive-modal .archive-slot__file,
+.archive-modal .archive-slot__note {
+  color: var(--color-background);
+}
+
+.archive-modal .archive-slot__note {
+  opacity: 0.7;
+}
+
+.archive-modal .newspaper-mark--hero {
+  color: var(--color-background);
+}
+
+.archive-modal .newspaper-mark--hero p {
+  color: var(--color-background);
+}

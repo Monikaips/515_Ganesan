@@ -1,0 +1,65 @@
+/*
+  Signature mark: the road / the journey / the ambulance.
+  ────────────────────────●────────
+  The node is the only circle in the system.
+*/
+
+.redline {
+  --node-size: 9px;
+  position: relative;
+  display: block;
+  width: 100%;
+  height: var(--node-size);
+  flex-shrink: 0;
+}
+
+.redline--short {
+  width: 7.5rem;
+}
+
+.redline--vertical {
+  width: var(--node-size);
+  height: 100%;
+  min-height: 6rem;
+}
+
+.redline__track {
+  position: absolute;
+  display: block;
+  background: var(--color-emergency);
+}
+
+.redline--horizontal .redline__track {
+  left: 0;
+  right: 0;
+  top: calc(50% - (var(--stroke-emergency) / 2));
+  height: var(--stroke-emergency);
+  transform-origin: left center;
+}
+
+.redline--vertical .redline__track {
+  top: 0;
+  bottom: 0;
+  left: calc(50% - (var(--stroke-emergency) / 2));
+  width: var(--stroke-emergency);
+  transform-origin: center top;
+}
+
+.redline__node {
+  position: absolute;
+  width: var(--node-size);
+  height: var(--node-size);
+  background: var(--color-emergency);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.redline--horizontal .redline__node {
+  top: 50%;
+  left: var(--node, 72%);
+}
+
+.redline--vertical .redline__node {
+  left: 50%;
+  top: var(--node, 72%);
+}

@@ -1,0 +1,12 @@
+---
+description: Use the Framer Motion system only. No ad-hoc durations or GSAP yet.
+alwaysApply: true
+---
+
+# Motion system
+
+- Animation library: **Framer Motion only**. Do not install or use GSAP until asked.
+- Import shared timing from `src/motion` (`duration`, `ease`, `viewport`, variants).
+- Do not invent one-off durations, springs, or bounce easings.
+- Documentary feel: fade / slight Y / clip-path reveal. No playful springs.
+- Page changes go through `PageTransition`. Scroll reveals use `fadeUp` / `reveal` / `ImageReveal`.

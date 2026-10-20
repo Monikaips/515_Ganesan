@@ -1,0 +1,133 @@
+.doc {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-top: calc(var(--space-7) * -1);
+  margin-bottom: calc(var(--space-7) * -1);
+}
+
+.doc .doc-section {
+  margin: 0;
+  border: 0;
+  background: var(--color-background);
+  padding: var(--space-8) var(--space-6);
+}
+
+.doc-narrow,
+.doc-split,
+.doc-facts,
+.doc-media {
+  width: min(var(--max-width), 100%);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.doc-narrow {
+  max-width: 40rem;
+}
+
+.doc-prose {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.doc-prose p {
+  font-size: var(--text-lg);
+  color: var(--color-primary);
+  max-width: 38rem;
+}
+
+.doc-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-7);
+  align-items: center;
+}
+
+.doc-split__image {
+  overflow: hidden;
+  border: var(--stroke) solid var(--color-border);
+}
+
+.doc-split__image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  object-fit: cover;
+}
+
+.doc-facts {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-5);
+  margin-top: var(--space-6);
+}
+
+.doc-facts li {
+  padding-top: var(--space-4);
+  border-top: var(--stroke) solid var(--color-border);
+}
+
+.doc-facts span {
+  display: block;
+  font-size: 0.6875rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  margin-bottom: var(--space-2);
+}
+
+.doc-facts strong {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.doc-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-top: var(--space-5);
+}
+
+.doc-links a {
+  font-size: 0.6875rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--color-emergency);
+  border-bottom: var(--stroke-emergency) solid var(--color-emergency);
+  width: fit-content;
+  padding-bottom: var(--space-1);
+}
+
+.doc-hero-photo {
+  width: 100%;
+  overflow: hidden;
+  border-top: var(--stroke) solid var(--color-border);
+  border-bottom: var(--stroke) solid var(--color-border);
+}
+
+.doc-hero-photo img {
+  display: block;
+  width: 100%;
+  height: min(70vh, 720px);
+  object-fit: cover;
+  object-position: center 20%;
+}
+
+@media screen and (max-width: 900px) {
+  .doc-split {
+    grid-template-columns: 1fr;
+  }
+
+  .doc-facts {
+    grid-template-columns: 1fr;
+  }
+}

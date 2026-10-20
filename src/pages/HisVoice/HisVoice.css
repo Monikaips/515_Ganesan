@@ -1,0 +1,137 @@
+.voice-hero {
+  width: min(var(--max-width), 100%);
+  margin: 0 auto;
+  padding: var(--space-8) var(--space-6) var(--space-7);
+  display: grid;
+  grid-template-columns: 1fr 0.7fr;
+  gap: var(--space-7);
+  align-items: end;
+}
+
+.voice-hero h1 {
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
+  max-width: 10ch;
+  margin: 0 0 var(--space-4);
+}
+
+.voice-hero__lede {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  color: var(--color-muted);
+  max-width: 22ch;
+}
+
+.voice-hero__portrait {
+  overflow: hidden;
+  border: var(--stroke) solid var(--color-border);
+}
+
+.voice-hero__portrait img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+}
+
+.voice-list {
+  width: min(var(--max-width), 100%);
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+  display: flex;
+  flex-direction: column;
+  border-top: var(--stroke) solid var(--color-border);
+}
+
+.voice-list button {
+  appearance: none;
+  background: none;
+  border: 0;
+  border-bottom: var(--stroke) solid var(--color-border);
+  padding: var(--space-5) 0;
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.voice-list__play {
+  color: var(--color-emergency);
+  font-size: 0.75rem;
+  letter-spacing: 0;
+}
+
+.voice-list button:hover,
+.voice-list button.is-active {
+  color: var(--color-emergency);
+}
+
+.voice-chapter {
+  width: min(var(--max-width), 100%);
+  margin: 0 auto;
+  padding: var(--space-8) var(--space-6);
+}
+
+.voice-chapter__note {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  color: var(--color-muted);
+  max-width: 32ch;
+  margin: var(--space-5) 0 var(--space-6);
+}
+
+.voice-quote {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-style: italic;
+  max-width: 28ch;
+  margin: 0 0 var(--space-6);
+}
+
+.voice-film {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: var(--stroke) solid var(--color-border);
+  background: var(--color-primary);
+}
+
+.voice-film iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.voice-empty {
+  color: var(--color-muted);
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+}
+
+.voice-needed {
+  margin-top: var(--space-7);
+}
+
+.voice-slots {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: var(--stroke);
+  margin-top: var(--space-5);
+}
+
+@media (max-width: 800px) {
+  .voice-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .voice-hero__portrait {
+    order: -1;
+    max-width: 20rem;
+  }
+}

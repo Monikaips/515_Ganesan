@@ -1,0 +1,48 @@
+.heartbeat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  color: var(--color-emergency);
+  margin: var(--space-2) 0;
+}
+
+.heartbeat--on-red {
+  color: var(--color-surface);
+}
+
+.heartbeat__cross {
+  position: relative;
+  width: 0.85rem;
+  height: 0.85rem;
+  flex-shrink: 0;
+}
+
+.heartbeat__cross::before,
+.heartbeat__cross::after {
+  content: '';
+  position: absolute;
+  background: currentColor;
+}
+
+.heartbeat__cross::before {
+  left: 50%;
+  top: 0;
+  width: 0.2rem;
+  height: 100%;
+  transform: translateX(-50%);
+}
+
+.heartbeat__cross::after {
+  top: 50%;
+  left: 0;
+  height: 0.2rem;
+  width: 100%;
+  transform: translateY(-50%);
+}
+
+.heartbeat__line {
+  width: min(7.5rem, 28vw);
+  height: 1.25rem;
+  display: block;
+}

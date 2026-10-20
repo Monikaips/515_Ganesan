@@ -1,0 +1,36 @@
+.archive-slot {
+  border: var(--stroke) dashed var(--color-border);
+  background: var(--color-surface);
+  padding: var(--space-5);
+  min-height: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--space-2);
+}
+
+.archive-slot--quote {
+  min-height: 7rem;
+}
+
+.archive-slot__type {
+  font-size: 0.6875rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-emergency);
+}
+
+.archive-slot__file {
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-primary);
+  word-break: break-all;
+  margin: 0;
+}
+
+.archive-slot__note {
+  margin: 0;
+  font-size: var(--text-sm);
+  color: var(--color-muted);
+}

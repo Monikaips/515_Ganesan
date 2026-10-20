@@ -1,0 +1,15 @@
+.theman-hero {
+  padding: var(--space-8) var(--space-6) var(--space-6);
+}
+
+.theman-hero__copy {
+  width: min(var(--max-width), 100%);
+  margin: 0 auto var(--space-7);
+}
+
+.theman-hero__title {
+  font-family: var(--font-display);
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
+  max-width: 14ch;
+  margin: var(--space-5) 0 0;
+}

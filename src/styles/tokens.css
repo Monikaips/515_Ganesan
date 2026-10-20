@@ -1,0 +1,56 @@
+/*
+  Design tokens — the only color source for this project.
+
+  Palette (red + white impact theme):
+    Background (off-white)  #F8F8F5
+    Surface (white)         #FFFFFF
+    Primary (near-black)    #1A1A1A
+    Emergency Red           #D62828
+    Deep Red                #9D0208
+    Muted (secondary text)  #5C5C5C
+    Border                  #E8E8E2
+
+  Rule: do not introduce new hex / rgb / named colors in components or CSS.
+  Use these custom properties only. Add new tokens here first if required.
+*/
+
+:root {
+  --color-background: #F8F8F5;
+  --color-surface: #FFFFFF;
+  --color-primary: #1A1A1A;
+  --color-emergency: #D62828;
+  --color-emergency-deep: #9D0208;
+  --color-muted: #5C5C5C;
+  --color-border: #E8E8E2;
+
+  --font-sans: "IBM Plex Sans", Helvetica, Arial, sans-serif;
+  --font-display: "IBM Plex Serif", Georgia, "Times New Roman", serif;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-md: 1.125rem; /* 18px body */
+  --text-lg: 1.25rem;
+  --text-xl: 1.5rem;
+  --text-2xl: 2.25rem;
+  --text-3xl: 3rem;
+
+  --leading-tight: 1.2;
+  --leading-body: 1.65;
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4.5rem;
+
+  --stroke: 1px;
+  --stroke-emergency: 2px;
+  --radius: 0;
+  --max-width: 1200px;
+  --header-offset: 1.25rem;
+  /* Mobile sticky contact bar; set under max-width 768px */
+  --sticky-bar-h: 0px;
+}

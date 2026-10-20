@@ -1,0 +1,5 @@
+.award-wall {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: var(--space-6) var(--space-5);
+}
